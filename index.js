@@ -37,7 +37,7 @@ exports.NetworkMod = function reee(d) {
         d.send('S_DUNGEON_EVENT_MESSAGE', 2, {
             type: -1,
             chat: true,
-            channel: chatchan,
+            channel: e.channel,
             message: `<FONT>${e.channel == 206 ? "" : `[${e.name}] : `}${e.message}</FONT>`
         })
         return false
