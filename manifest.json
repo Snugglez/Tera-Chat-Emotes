@@ -1,8 +1,8 @@
 {
 	"files": {
-		"Icon_TBA.gpk": "ff3c91dfffb694c01f1d54d7f415d1046e52cdd8ee50a0349cc16ef95754367a",
+		"chatemotes.gpk": "ff3c91dfffb694c01f1d54d7f415d1046e52cdd8ee50a0349cc16ef95754367a",
 		"config_generator.js": "8b0068c4bf78b351fa2a8e02c1275d5e4fbae1aaebccaf5b9a2674f54f3c6941",
-		"index.js": "5a4cb3a0938b4480838baaee20faa3bd619a805011968a9cc5175442dc3a39a7",
+		"index.js": "1a760a30285b497bd1268371b4995d769d906d76786b866b2a54cda04907330e",
 		"module.json": "a8e173e387f7e775b9752c13f7e8e2ff0ad2711bce921a8c1985c0bf731073ff"
 	},
 	"defs": {

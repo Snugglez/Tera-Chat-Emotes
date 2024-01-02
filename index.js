@@ -1,6 +1,6 @@
 exports.ClientMod = class {
     install(installer) {
-        installer.gpk("Icon_TBA.gpk")
+        installer.gpk("chatemotes.gpk")
     }
 }
 exports.NetworkMod = function reee(d) {
@@ -30,7 +30,7 @@ exports.NetworkMod = function reee(d) {
         emoteList.forEach(emote => {
             if (e.message.includes(emote)) {
                 found = true
-                e.message = e.message.replaceAll(emote, `<img src="img://__Icon_TBA.${emote.split(':')[1]}" width="${d.settings.width}" height="${d.settings.height}" vspace="${d.settings.vspace}"/>`)
+                e.message = e.message.replaceAll(emote, `<img src="img://__chatemotes.${emote.split(':')[1]}" width="${d.settings.width}" height="${d.settings.height}" vspace="${d.settings.vspace}"/>`)
             }
         })
         if (!found) return
@@ -48,7 +48,7 @@ exports.NetworkMod = function reee(d) {
             case 'list': {
                 let msg = "", ii = 0
                 emoteList.forEach(emote => {
-                    msg += `${emote} <img src="img://__Icon_TBA.${emote.split(':')[1]}" width="24" height="24" vspace="-8"/>${ii < 2 ? ' | ' : '&#10;'}`
+                    msg += `${emote} <img src="img://__chatemotes.${emote.split(':')[1]}" width="24" height="24" vspace="-8"/>${ii < 2 ? ' | ' : '&#10;'}`
                     ii++
                     if (ii > 2) ii = 0
                 })
