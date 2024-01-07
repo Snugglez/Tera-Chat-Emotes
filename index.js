@@ -22,7 +22,7 @@ exports.NetworkMod = function reee(d) {
         ':slightsmile:', ':sob:', ':sus:',
         ':swblob:', ':thenk:', ':thisisfine:',
         ':thonk:', ':toast:', ':wtfbarry:',
-        ':yep:'
+        ':yep:', ':ban:', ':pepeban:'
     ]
 
     d.hook('S_CHAT', '*', { filter: { fake: null } }, (e) => {
