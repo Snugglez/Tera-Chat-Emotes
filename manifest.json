@@ -1,8 +1,8 @@
 {
 	"files": {
-		"chatemotes.gpk": "b85fee5271898460c67f58825ca5d56704d2a01a184c1e368f98cfce36738c0a",
-		"config_generator.js": "8b0068c4bf78b351fa2a8e02c1275d5e4fbae1aaebccaf5b9a2674f54f3c6941",
-		"index.js": "4c3eec90ae72c49c54a4b22f8d31b7a338dd577f2fc89ab5226e7f6a88ca4b60",
+		"chatemotes.gpk": "b3c64ac9398e142ffda7cf4e42d88f41969e751e473992af7df605858a1cbdbe",
+		"config_generator.js": "0de9b895072603af3fe6d1ab1cf37b2cd23f7bc3e3ac707264e54dffcc5d54f5",
+		"index.js": "82bcba74927cf39c6ff928b2f907d3abd7312d888c582bec19972cba02e4c291",
 		"module.json": "a8e173e387f7e775b9752c13f7e8e2ff0ad2711bce921a8c1985c0bf731073ff"
 	},
 	"defs": {

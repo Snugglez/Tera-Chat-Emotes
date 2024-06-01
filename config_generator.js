@@ -1,6 +1,6 @@
 "use strict"
 
-const DefaultSettings = { width: 24, height: 24, vspace: -8 }
+const DefaultSettings = { width: 24, height: 24, vspace: -16 }
 
 module.exports = function MigrateSettings(from_ver, to_ver, settings) {
 	if (from_ver === undefined) {
