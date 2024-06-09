@@ -1,11 +1,13 @@
 {
 	"files": {
-		"chatemotes.gpk": "b3c64ac9398e142ffda7cf4e42d88f41969e751e473992af7df605858a1cbdbe",
+		"S_REPLY_CLIENT_CHAT_OPTION_SETTING.def": "efe929507f3cc4c611624dbebe147be0a6d0b466f6e723933fffe5b94c3487d4",
+		"chatemotes.gpk": "856f5bd7b9b351fccd48ccd6c6ae8a465a64f80c58d55cede1e8f68d87c6837f",
 		"config_generator.js": "0de9b895072603af3fe6d1ab1cf37b2cd23f7bc3e3ac707264e54dffcc5d54f5",
-		"index.js": "82bcba74927cf39c6ff928b2f907d3abd7312d888c582bec19972cba02e4c291",
+		"index.js": "371d03fee866b9486b1a4d8b15f8801319e31862cd4ead5c80ede18576510bfc",
 		"module.json": "a8e173e387f7e775b9752c13f7e8e2ff0ad2711bce921a8c1985c0bf731073ff"
 	},
 	"defs": {
-		"S_DUNGEON_EVENT_MESSAGE": 2
+		"S_DUNGEON_EVENT_MESSAGE": 2,
+		"S_REPLY_CLIENT_CHAT_OPTION_SETTING": 0
 	}
 }

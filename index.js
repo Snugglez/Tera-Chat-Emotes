@@ -44,16 +44,52 @@ exports.NetworkMod = function reee(d) {
         ':thumbsup:'
     ]
 
-    d.hook('S_CHAT', '*', { filter: { fake: null } }, (e) => {
-        if (!e.message.includes(':')) return //simple check so we arnt looping the emoteList for every message
+    function replacer(arg) {
+        if (!arg.includes(':')) return //simple check so we arnt looping the emoteList for every message
         let found = false
         emoteList.forEach(emote => {
-            if (e.message.includes(emote)) {
+            if (arg.includes(emote)) {
                 found = true
-                e.message = e.message.replaceAll(emote, `<img src="img://__chatemotes.${emote.split(':')[1]}" width="${settings.width}" height="${settings.height}" vspace="${settings.vspace}"/>`)
+                arg = arg.replaceAll(emote, `<img src="img://__chatemotes.${emote.split(':')[1]}" width="${settings.width}" height="${settings.height}" vspace="${settings.vspace}"/>`)
             }
         })
-        if (!found) return
+        if (!found) return false
+        else return arg
+    }
+
+    //fun jank workaround to get these working in whispers
+    d.dispatch.addDefinition('S_REPLY_CLIENT_CHAT_OPTION_SETTING', 0, __dirname + '//S_REPLY_CLIENT_CHAT_OPTION_SETTING.def', true)
+
+    d.hook('S_WHISPER', '*', (e) => {
+        if (!e.message.includes(':')) return //simple check so we arnt looping the emoteList for every message
+        e.message = replacer(e.message)
+        if (!e.message) return
+        const fromMe = d.game.me.is(e.gameId)
+        d.send('S_DUNGEON_EVENT_MESSAGE', 2, {
+            type: -1,
+            chat: true,
+            channel: 206,
+            message: `<FONT>${fromMe ? '[Sent Whisper' : '   <img src="img://__chatemotes.whisperArrow" width="18" height="18" vspace="-6"/>[Received Whisper'}][${e.recipient}] : ${e.message}</FONT>`
+        })
+        return false
+    })
+
+    d.hook('S_REPLY_CLIENT_CHAT_OPTION_SETTING', 0, { filter: { fake: null } }, (e) => {
+        e.tabs.forEach(tab => {
+            if (tab.channels.includes(7) && !tab.channels.includes(206)) tab.channels.push(206)
+        })
+        if (!e.channels.find(channel => channel.id == 206)) {
+            const whispChan = e.channels.find(channel => channel.id == 7)
+            if (whispChan) e.channels.push({ id: 206, r: whispChan.r, g: whispChan.g, b: whispChan.b })
+            else e.channels.push({ id: 206, r: 238, g: 153, b: 255 })
+        }
+        return true
+    })
+
+    d.hook('S_CHAT', '*', { filter: { fake: null } }, (e) => {
+        if (!e.message.includes(':')) return //simple check so we arnt looping the emoteList for every message
+        e.message = replacer(e.message)
+        if (!e.message) return
         d.send('S_DUNGEON_EVENT_MESSAGE', 2, {//reroutes the above message to this because sChat doesn't support the img tag directly
             type: -1,
             chat: true,
