@@ -69,7 +69,14 @@ exports.NetworkMod = function reee(d) {
             type: -1,
             chat: true,
             channel: 206,
-            message: `<FONT>${fromMe ? '[Sent Whisper' : '   <img src="img://__chatemotes.whisperArrow" width="18" height="18" vspace="-6"/>[Received Whisper'}][${e.name}] : ${e.message}</FONT>`
+            message: `<FONT>${fromMe ? '[Sent Whisper' : '   <img src="img://__chatemotes.whisperArrow" width="18" height="18" vspace="-4"/>[Received Whisper'}][${e.name}] : ${e.message}</FONT>`
+        })
+        d.send('S_PLAY_SOUND_BYNAME', '*', {
+            gameId: d.game.me.gameId,
+            volume: 1,
+            range: 1,
+            pitch: 1,
+            name: 'InterfaceSound.SYSMSGCUE.SYSMSG_2001Cue'
         })
         return false
     })
