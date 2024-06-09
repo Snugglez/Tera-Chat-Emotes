@@ -15,5 +15,5 @@ Command | Argument(s) | Example | Description
 # Known Issues
 
 Cannot click users name when message contains an emote  
-Whispers not supported  
+~Whispers not supported~(now just missing the ding sound and pop up if you have that option enabled when a whisper contains an emote)  
 client lacks some logic in both regards and haven't found a usable workaround that isnt cancer
