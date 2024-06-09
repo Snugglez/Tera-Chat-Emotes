@@ -69,7 +69,7 @@ exports.NetworkMod = function reee(d) {
             type: -1,
             chat: true,
             channel: 206,
-            message: `<FONT>${fromMe ? '[Sent Whisper' : '   <img src="img://__chatemotes.whisperArrow" width="18" height="18" vspace="-6"/>[Received Whisper'}][${e.recipient}] : ${e.message}</FONT>`
+            message: `<FONT>${fromMe ? '[Sent Whisper' : '   <img src="img://__chatemotes.whisperArrow" width="18" height="18" vspace="-6"/>[Received Whisper'}][${e.name}] : ${e.message}</FONT>`
         })
         return false
     })
