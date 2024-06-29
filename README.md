@@ -1,7 +1,7 @@
 # Tera-Chat-Emotes
 Adds a collection of :yep: type emotes to tera chat
 
-![](https://i.imgur.com/OyTmS5l.png)
+![](https://i.imgur.com/GMLzROP.png)
 
 # Commands
 Note, if using the commands in the toolbox channel or `/8`, ignore the `!` prefix
