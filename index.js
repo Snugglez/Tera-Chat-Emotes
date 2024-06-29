@@ -41,7 +41,7 @@ exports.NetworkMod = function reee(d) {
         ':thonk:', ':toast:', ':wtfbarry:', ':yep:',
         ':ban:', ':pepeban:', ':crycat:', ':feelsokman:',
         ':gotya:', ':heartcat:', ':pepecringe:', ':thumbsdown:',
-        ':thumbsup:'
+        ':thumbsup:', ':eyes:', ':tm:'
     ]
 
     function replacer(arg) {
